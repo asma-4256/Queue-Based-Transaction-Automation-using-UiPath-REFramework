@@ -2,16 +2,24 @@ Queue-Based Transaction Automation using UiPath REFramework
 
 🚀 A scalable Dispatcher–Performer automation solution built using UiPath REFramework and UiPath Orchestrator for transaction-based financial process automation.
 
-This project demonstrates enterprise-level RPA architecture using queue-based processing, robust exception handling, secure credential management, and modular workflow design. The solution automates transaction handling in the UiDemo application by separating the process into Dispatcher and Performer workflows.
+This project demonstrates enterprise-level RPA architecture using queue-based processing, robust exception handling, secure credential management, and modular workflow design. The solution automates transaction handling in the UiDemo application by separating the process into Dispatcher and Performer workflows.  
+
+Video Reference: https://github.com/user-attachments/assets/44ef8fa6-2b66-4e1c-aeff-d12ad04b397f
 
 🔷 Project Architecture
-
-Excel Input Data  ↓  
-Dispatcher Workflow  ↓   
-UiPath Orchestrator Queue  ↓   
-Performer Workflow  ↓  
-UiDemo Application  ↓  
+```
+Excel Input Data  
+       ↓  
+Dispatcher Workflow  
+       ↓   
+UiPath Orchestrator Queue  
+       ↓   
+Performer Workflow  
+       ↓  
+UiDemo Application  
+       ↓  
 Transaction Status Update
+```
 
 🔷 Dispatcher Workflow
 
@@ -35,7 +43,7 @@ Dispatcher States
 
 •Get Transaction Data
 
- Fetch next DataRow transaction
+  Fetch next DataRow transaction
 
 •Process State
 
@@ -61,14 +69,14 @@ Performer States
 
 •Initialization State
 
- kill existing applications
- Load Config values
- Load Queue Name & Folder dynamically
- Retrieve credentials securely from Assets
+  kill existing applications
+  Load Config values
+  Load Queue Name & Folder dynamically
+  Retrieve credentials securely from Assets
 
 • Get Transaction Data
 
-  Fetch Queue Item
+   Fetch Queue Item
 
 • Process Transaction
 
