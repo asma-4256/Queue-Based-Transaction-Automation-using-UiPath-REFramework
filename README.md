@@ -4,7 +4,7 @@ Queue-Based Transaction Automation using UiPath REFramework
 
 This project demonstrates enterprise-level RPA architecture using queue-based processing, robust exception handling, secure credential management, and modular workflow design. The solution automates transaction handling in the UiDemo application by separating the process into Dispatcher and Performer workflows.  
 
-Video Reference: https://github.com/user-attachments/assets/44ef8fa6-2b66-4e1c-aeff-d12ad04b397f
+• Video Reference: https://github.com/user-attachments/assets/44ef8fa6-2b66-4e1c-aeff-d12ad04b397f
 
 🔷 Project Architecture
 ```
@@ -27,27 +27,27 @@ The Dispatcher bot is responsible for preparing and pushing transaction data int
 
 Key Functionalities
 
-• Reads Excel transaction data during the Initialization state
-• Converts data into a linear transaction structure
-• Pushes each row into Orchestrator Queue Items
-• Dynamically retrieves Queue Name & Folder from Config
-• Uses queue-based architecture for scalability
+• Reads Excel transaction data during the Initialization state  
+• Converts data into a linear transaction structure  
+• Pushes each row into Orchestrator Queue Items  
+• Dynamically retrieves Queue Name & Folder from Config  
+• Uses queue-based architecture for scalability  
 
-Dispatcher States
-
+**Dispatcher States
+**
 •Initialization State
 
-  Load Config.xlsx
-  Read Excel data
-  Initialize DataTable
+-> Load Config.xlsx
+-> Read Excel data
+-> Initialize DataTable
 
 •Get Transaction Data
 
-  Fetch next DataRow transaction
+-> Fetch next DataRow transaction
 
 •Process State
 
-  Add Queue Item into Orchestrator Queue
+-> Add Queue Item into Orchestrator Queue
 
 🔷 Performer Workflow
 
@@ -60,38 +60,38 @@ Key Functionalities
 • Opens UiDemo application
 • Processes:
 
-  Cash In
-  On-Us Check
-  Non-On-Us Check
+-> Cash In  
+-> On-Us Check  
+-> Non-On-Us Check
 • Updates transaction status in Orchestrator
 
-Performer States
+**Performer States**
 
 •Initialization State
 
-  kill existing applications
-  Load Config values
-  Load Queue Name & Folder dynamically
-  Retrieve credentials securely from Assets
+-> kill existing applications
+-> Load Config values
+-> Load Queue Name & Folder dynamically
+-> Retrieve credentials securely from Assets
 
 • Get Transaction Data
 
-   Fetch Queue Item
+-> Fetch Queue Item
 
 • Process Transaction
 
-  Open UiDemo application
-  Enter transaction details
-  Click Accept
-  Update Queue status
+-> Open UiDemo application
+-> Enter transaction details
+-> Click Accept
+-> Update Queue status
 
 🔷 Exception Handling
 
 This project uses the standard REFramework exception handling model.
 
-**Business Rule Exception**
+• **Business Rule Exception**
 
-Transactions with amount ≥ 10000 are marked as Business Exceptions.
+--> Transactions with amount ≥ 10000 are marked as Business Exceptions.
 
 Example:
 
