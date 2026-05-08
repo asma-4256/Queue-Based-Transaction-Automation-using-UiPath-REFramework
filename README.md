@@ -6,16 +6,11 @@ This project demonstrates enterprise-level RPA architecture using queue-based pr
 
 🔷 Project Architecture
 
-Excel Input Data
-      ↓  
-Dispatcher Workflow
-      ↓  
-UiPath Orchestrator Queue
-      ↓  
-Performer Workflow
-      ↓  
-UiDemo Application
-      ↓  
+Excel Input Data   ↓  
+Dispatcher Workflow  ↓   
+UiPath Orchestrator Queue  ↓   
+Performer Workflow  ↓  
+UiDemo Application  ↓  
 Transaction Status Update
 
 🔷 Dispatcher Workflow
@@ -32,19 +27,19 @@ Key Functionalities
 
 Dispatcher States
 
-Initialization State
+•Initialization State
 
-Load Config.xlsx
-Read Excel data
-Initialize DataTable
+  Load Config.xlsx
+  Read Excel data
+  Initialize DataTable
 
-Get Transaction Data
+•Get Transaction Data
 
-Fetch next DataRow transaction
+ Fetch next DataRow transaction
 
-Process State
+•Process State
 
-Add Queue Item into Orchestrator Queue
+  Add Queue Item into Orchestrator Queue
 
 🔷 Performer Workflow
 
@@ -57,44 +52,44 @@ Key Functionalities
 • Opens UiDemo application
 • Processes:
 
-Cash In
-On-Us Check
-Non-On-Us Check
+  Cash In
+  On-Us Check
+  Non-On-Us Check
 • Updates transaction status in Orchestrator
 
 Performer States
 
-Initialization State
+•Initialization State
 
-Kill existing applications
-Load Config values
-Load Queue Name & Folder dynamically
-Retrieve credentials securely from Assets
+ kill existing applications
+ Load Config values
+ Load Queue Name & Folder dynamically
+ Retrieve credentials securely from Assets
 
-Get Transaction Data
+• Get Transaction Data
 
-Fetch Queue Item
+  Fetch Queue Item
 
-Process Transaction
+• Process Transaction
 
-Open UiDemo application
-Enter transaction details
-Click Accept
-Update Queue status
+  Open UiDemo application
+  Enter transaction details
+  Click Accept
+  Update Queue status
 
 🔷 Exception Handling
 
 This project uses the standard REFramework exception handling model.
 
-Business Rule Exception
+**Business Rule Exception**
 
 Transactions with amount ≥ 10000 are marked as Business Exceptions.
 
 Example:
 
-Throw New BusinessRuleException("The total deposit amount is greater than 10000, so handle manually")
+    Throw New BusinessRuleException("The total deposit amount is greater than 10000, so handle manually")
 
-System Exception
+• System Exception
 
 Application failures, selector issues, or unexpected runtime failures are retried automatically through the Orchestrator Queue retry mechanism.
 
@@ -153,21 +148,21 @@ This automation simulates a banking transaction processing system where multiple
 
 🔷 Best Practices Followed
 
-• REFramework architecture
-• Config-driven workflows
-• Queue-based scalability
-• Separation of Dispatcher & Performer
-• Secure Asset management
-• Structured logging
-• Retry handling using Orchestrator Queues
+• REFramework architecture  
+• Config-driven workflows  
+• Queue-based scalability  
+• Separation of Dispatcher & Performer  
+• Secure Asset management  
+• Structured logging  
+• Retry handling using Orchestrator Queues  
 
 🔷 Learning Outcomes
 
 Through this project, I gained hands-on experience in:
 
-• Enterprise RPA architecture
-• Queue processing
-• Transaction automation
-• Exception handling strategies
-• Orchestrator integration
-• Credential asset management
+• Enterprise RPA architecture  
+• Queue processing  
+• Transaction automation  
+• Exception handling strategies  
+• Orchestrator integration  
+• Credential asset management  
