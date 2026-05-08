@@ -6,7 +6,7 @@ This project demonstrates enterprise-level RPA architecture using queue-based pr
 
 🔷 Project Architecture
 
-Excel Input Data   ↓  
+Excel Input Data  ↓  
 Dispatcher Workflow  ↓   
 UiPath Orchestrator Queue  ↓   
 Performer Workflow  ↓  
@@ -99,36 +99,36 @@ Application failures, selector issues, or unexpected runtime failures are retrie
 
 Benefits
 
-• No hardcoded credentials
-• Improved security
-• Easy credential management
-• Enterprise-level best practice
+• No hardcoded credentials  
+• Improved security  
+• Easy credential management  
+• Enterprise-level best practice  
 
 Credentials are retrieved during runtime using:
 
-• Get Credential activity
-• Config-driven asset references
+• Get Credential activity  
+• Config-driven asset references  
 
 🔷 Technologies Used
 
-• UiPath Studio
-• UiPath Orchestrator
-• REFramework
-• Excel Automation
-• Queue Automation
-• Exception Handling
-• Config-driven architecture
+• UiPath Studio  
+• UiPath Orchestrator  
+• REFramework  
+• Excel Automation  
+• Queue Automation  
+• Exception Handling  
+• Config-driven architecture  
 
 🔷 Features
 
-• Dispatcher–Performer architecture
-• Queue-based transaction processing
-• Dynamic Config management
-• Secure Credential Assets
-• Business & System Exception handling
-• Retry mechanism support
-• Scalable enterprise design
-• Modular workflow structure
+• Dispatcher–Performer architecture  
+• Queue-based transaction processing  
+• Dynamic Config management  
+• Secure Credential Assets  
+• Business & System Exception handling  
+• Retry mechanism support  
+• Scalable enterprise design  
+• Modular workflow structure  
 
 🔷 How to Run
 
