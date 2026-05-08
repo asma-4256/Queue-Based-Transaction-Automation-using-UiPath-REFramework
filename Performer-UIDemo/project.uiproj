@@ -1,0 +1,6 @@
+{
+  "Name": "Performer-UIDemo",
+  "ProjectType": "Process",
+  "Description": "This is Performer bot which eter data from the queue to the UIDemo Application\r\n",
+  "MainFile": "Main.xaml"
+}

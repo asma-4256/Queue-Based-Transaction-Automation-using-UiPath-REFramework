@@ -1,0 +1,6 @@
+{
+  "Name": "Dispatcher-UIDemo",
+  "ProjectType": "Process",
+  "Description": "This process is to add the items from Excel to Queue in Orchestrator",
+  "MainFile": "Main.xaml"
+}
